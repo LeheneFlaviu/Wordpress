@@ -1,0 +1,6 @@
+c:\users\flaviul\documents\visual studio 2015\Projects\Wordpress\Wordpress\bin\Debug\Wordpress.exe.config
+c:\users\flaviul\documents\visual studio 2015\Projects\Wordpress\Wordpress\bin\Debug\Wordpress.exe
+c:\users\flaviul\documents\visual studio 2015\Projects\Wordpress\Wordpress\bin\Debug\Wordpress.pdb
+c:\users\flaviul\documents\visual studio 2015\Projects\Wordpress\Wordpress\obj\Debug\Wordpress.csprojResolveAssemblyReference.cache
+c:\users\flaviul\documents\visual studio 2015\Projects\Wordpress\Wordpress\obj\Debug\Wordpress.exe
+c:\users\flaviul\documents\visual studio 2015\Projects\Wordpress\Wordpress\obj\Debug\Wordpress.pdb
