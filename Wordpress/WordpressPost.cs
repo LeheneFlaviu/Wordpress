@@ -10,10 +10,8 @@ namespace Wordpress
     {
         List<string> categories = new List<string>();
         List<string> tags = new List<string>();
-
-
-        enum Formats = {Standard, Aside, Image, Video, Quote, Link };
-        Format format
+        enum Formats  {Standard, Aside, Image, Video, Quote, Link };
+        Formats format;
         public WordpressPost(string title, string content) : base(title, content)
         {
         }
