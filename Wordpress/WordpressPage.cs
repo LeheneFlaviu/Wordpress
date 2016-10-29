@@ -100,6 +100,32 @@ namespace Wordpress
             lista.Add(this);
         }
 
+        public static List<WordpressPage> SortList(List<WordpressPage> list)
+        {
+            List<WordpressPage> sortedList = new List<WordpressPage>();
+
+
+            while (list.Count != 0) 
+            {
+                string minTitle = list[0].title;
+                int minIndex = 0;
+
+                for (int i = 0; i < list.Count; i++) //count nu e zero based, de aceea "<" nu "<="
+                {
+                    if (String.Compare(minTitle,list[i].title) >= 0)
+                    {
+                        minTitle = list[i].title;
+                        minIndex = i;
+                    }
+                }
+
+                sortedList.Add(list[minIndex]);
+                list.RemoveAt(minIndex);
+            };
+
+            return sortedList;
+        }
+
     public override string ToString()
         {
 

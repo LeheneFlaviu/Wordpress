@@ -1,6 +1,8 @@
 ﻿using NUnit.Framework;
 using System;
 using System.Collections.Generic;
+using System.Linq;
+
 
 namespace Wordpress
 {
@@ -22,20 +24,23 @@ namespace Wordpress
             testList.Add(myPage4);
 
             List<WordpressPage> sortedList = new List<WordpressPage>();
-            testList.Add(myPage3);
-            testList.Add(myPage1);
-            testList.Add(myPage2);
-            testList.Add(myPage4);
+            sortedList.Add(myPage3);
+            sortedList.Add(myPage1);
+            sortedList.Add(myPage2);
+            sortedList.Add(myPage4);
 
-            try
-            {
-                Assert.IsTrue(SortList(testList) == sortedList);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Exceptie: " + e.Message);
-                //Console.ReadKey;
-            }
+            testList = WordpressPage.SortList(testList);
+
+            Assert.IsTrue(testList[0] == sortedList[0]);
+            Assert.IsTrue(testList[1] == sortedList[1]);
+            Assert.IsTrue(testList[2] == sortedList[2]);
+            Assert.IsTrue(testList[3] == sortedList[3]);
+
+
+            //Assert.IsTrue(testList[0] == testList[0]);
+            //Assert.IsTrue(testList[1] == testList[1]);
+            //Assert.IsTrue(testList[2] == testList[2]);
+            //Assert.IsTrue(testList[3] == testList[3]);
         }
     }
 }

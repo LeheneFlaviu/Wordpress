@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 
 namespace Wordpress
@@ -65,6 +66,9 @@ namespace Wordpress
             }
             Console.WriteLine(page.isPublished);
             Console.ReadKey();
+
+            List<WordpressPage> pageList = new List<WordpressPage>();
+
 
 
         }
