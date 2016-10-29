@@ -8,7 +8,7 @@ namespace Wordpress
 {
     public class WordpressPage
     {
-        public int id = 99;
+         public int id = 99;
  
         public string title = "fdsdsfsd";
  
@@ -20,7 +20,7 @@ namespace Wordpress
             Published,
             PendingReview
         };
-        public Status status  { get; set ; } = Status.PendingReview;
+        public Status status  { get; set ; }
         public Boolean isVisible = true;
         public DateTime publishDate;        
         public int parent =1;
@@ -28,6 +28,8 @@ namespace Wordpress
         public int viewCount = 3;
         public static int pageCount = 0;
         public static List<WordpressPage> lista = new List<WordpressPage>();
+  //    public static  List<WordpressPage> newList = new List<WordpressPage>();
+
         public bool isPublished
         {
             get
@@ -108,6 +110,42 @@ namespace Wordpress
          //return Convert.ToString(id);
            
         }
-        //
+
+
+
+    public static List<WordpressPage> SortIds(List<WordpressPage> listaPag)
+    {
+      //  return listaPag;
+       List<WordpressPage> newList = new List<WordpressPage>();
+
+       // for (int i = newList.Count - 1; i >= 0; i--)
+        while (listaPag.Count >0)
+        {
+            var min = listaPag[0];
+            for (int i = 0; i<listaPag.Count; i++)
+            {
+                if (min.id > listaPag[i].id)
+                {
+                    min = listaPag[i];
+                }
+            }
+            listaPag.Remove(min);
+            newList.Add(min);
+        } 
+      
+        return newList;
+    }
+
+        /*
+         * sortare prin selectie
+         * prin selectia min
+         * cautam mic elem lista
+         * add lista noua
+         * delete from lista veche
+         * 
+         */
+
+
+        
     }
 }
