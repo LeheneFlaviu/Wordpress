@@ -10,7 +10,7 @@ namespace Wordpress
     public class MyFirstTest
     {
         [Test]
-        public void myTest()
+        public void TestSortList()
         {
             WordpressPage myPage1 = new WordpressPage("page1", "content1");
             WordpressPage myPage2 = new WordpressPage("page2", "content2");
@@ -53,6 +53,7 @@ namespace Wordpress
             WordpressPost post2 = new WordpressPost(string.Empty, string.Empty);
 
             //occam's razor: se poate folosi un caz simplu (ex: 4 elemente, nu 100)
+
             //unique
             Assert.IsTrue(page1.id != page2.id);
             Assert.IsTrue(post1.id != post2.id);
@@ -63,5 +64,52 @@ namespace Wordpress
 
 
         }
+
+        //[Test]
+        //public void TestIPublish() 
+        //    //presupunem ca orice clasa care implementeaza interfata va modifica valoarea isPublished prin cele 2 metode ale sale 
+        //{
+        //    IPublish page = new WordpressPage(string.Empty, string.Empty);
+
+        //    page.Publish();
+        //    Assert.IsTrue(page.isPublished);
+        //    page.UnPublish();
+        //    Assert.IsFalse(page.isPublished);
+
+        //    IPublish comment = new WordpressComment();
+
+        //    comment.Publish();
+        //    Assert.IsTrue(comment.isPublished);
+        //    comment.UnPublish();
+        //    Assert.IsFalse(comment.isPublished);
+
+        //}
+
+        public void TestIPublish(IPublish element)
+        {
+            element.Publish();
+            Assert.IsTrue(element.isPublished);
+            element.UnPublish();
+            Assert.IsFalse(element.isPublished);
+        }
+
+        [Test]
+        public void TestIPublishPage()
+        {
+            TestIPublish(new WordpressPage(string.Empty, string.Empty));
+        }
+
+        [Test]
+        public void TestIPublishComment()
+        {
+            TestIPublish(new WordpressComment());
+        }
+
+        [Test]
+        public void TestIPublishPost()
+        {
+            TestIPublish(new WordpressPost(string.Empty, string.Empty));
+        }
+
     }
 }

@@ -51,7 +51,8 @@
     <Compile Include="IPublish.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Tests\MyFirstTest.cs" />
+    <Compile Include="Tests\MyTests.cs" />
+    <Compile Include="WordpressComment.cs" />
     <Compile Include="WordpressPage.cs" />
     <Compile Include="WordpressPost.cs" />
   </ItemGroup>

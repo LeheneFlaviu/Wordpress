@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Wordpress
 {
-    public class WordpressPage: IPublish
+    public class WordpressPage: IPublish //ne constrange sa includem in clasa toate metodele/proprietatile din interfata
     {
         public int id = 99;
  
