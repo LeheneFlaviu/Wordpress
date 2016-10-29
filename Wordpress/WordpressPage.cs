@@ -105,5 +105,23 @@ namespace Wordpress
             //return Convert.ToString(id);
             
         }
+        public static List<WordpressPage> SortIds(List<WordpressPage> pages)
+        {
+            List<WordpressPage> newestList = new List<WordpressPage>();
+            while (pages.Count!=0)
+            {
+                var newList = pages[0];
+                for (int i = 0; i < pages.Count; i++)
+                {              
+                if (newList.id > pages[i].id)                    
+                        newList = pages[i];                                                                               
+                }
+                newestList.Add(newList);
+                pages.Remove(newList);
+            }
+            return newestList;
+            //var sortedList = pages.OrderBy(o => o.id).ToList();
+            //return sortedList;
+        }
     }
 }

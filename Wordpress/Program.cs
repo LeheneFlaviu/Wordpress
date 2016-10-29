@@ -13,8 +13,7 @@ namespace Wordpress
 
             WordpressPage page = new WordpressPage("titlu_aaa","content_aaa sdags sdsgg");
             WordpressPage SecondPage = new WordpressPage("Al doilea", "si al 2-lea");           
-            //Console.WriteLine(page);
-            //Console.WriteLine();
+            //Console.WriteLine(page);            
            // Console.WriteLine(SecondPage);
             //Console.ReadKey();
 
@@ -27,7 +26,7 @@ namespace Wordpress
             //fourthPage.viewCount = 999999;
 
             //Console.WriteLine(thirdPage);
-            //Console.WriteLine();
+
             //Console.WriteLine(fourthPage);
             //Console.ReadKey();
 
@@ -66,6 +65,7 @@ namespace Wordpress
             Console.WriteLine(page.isPublished);
             Console.ReadKey();
 
+            
         }
     }
 }
