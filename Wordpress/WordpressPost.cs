@@ -24,11 +24,13 @@ namespace Wordpress
         public Format format;
         public List<string> Categories;
         public List<string> Tags;
-        string featuredImage;
+        public string featuredImage;
+        public static int postCount = 0;       
 
         public WordpressPost(string title, string content) : base(title, content)
         {
-
+            --pageCount;
+            this.id = ++postCount;
         }
     }
 }

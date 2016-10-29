@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Wordpress
 {
-    public class WordpressPage
+    public class WordpressPage : IPublish
     {
         public int id = 99;
         public string title = "testtitle";
@@ -40,7 +40,7 @@ namespace Wordpress
             this.id = ++pageCount;
         }
 
-        public void Publish()
+        public void Publish() 
         {
                 if (this.isPublished)
                 {
@@ -122,6 +122,11 @@ namespace Wordpress
             return newestList;
             //var sortedList = pages.OrderBy(o => o.id).ToList();
             //return sortedList;
+        }
+
+        public void Unpublished()
+        {
+            this.status = Status.Draft;
         }
     }
 }

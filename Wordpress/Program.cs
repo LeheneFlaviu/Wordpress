@@ -9,15 +9,13 @@ namespace Wordpress
         {
             /* Console.WriteLine("Hello world!");
              Console.WriteLine("Press any key to stop...");
-             Console.ReadKey();*/
-
+             Console.ReadKey();*/            
+           
             WordpressPage page = new WordpressPage("titlu_aaa","content_aaa sdags sdsgg");
             WordpressPage SecondPage = new WordpressPage("Al doilea", "si al 2-lea");           
             //Console.WriteLine(page);            
            // Console.WriteLine(SecondPage);
             //Console.ReadKey();
-
-
 
             WordpressPage thirdPage = new WordpressPage("third", "blabla3");
             WordpressPage fourthPage = new WordpressPage("patru", "dfssdffdssfd");
@@ -43,7 +41,7 @@ namespace Wordpress
             //    Console.ReadKey();
             //}
 
-            //thirdPage.Publish(5);
+            //thirdPage.Publish(5);            
             //fourthPage.Publish(DateTime.Now.AddDays(1));
             //thirdPage.SetChild(SecondPage);
             //fourthPage.SetParent(page);
