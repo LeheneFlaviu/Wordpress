@@ -9,7 +9,7 @@ namespace Wordpress
     public class WordpressPage
     {
         public int id = 99;
-        public string title = "blabla";
+        public string title = "fdsdsfsd";
         public string content = "abcdefg";
         public enum Status
         {
@@ -97,13 +97,13 @@ namespace Wordpress
             lista.Add(this);
         }
 
-        public override string ToString()
+    public override string ToString()
         {
 
             return "ID: " + id + "\nTitle: " + title + "\nContent: " + content + "\nStatus:" + status + "\nisVisible: " 
                 + isVisible + "\npublishdate: " + publishDate + "\nParent: " + parent + "\nOrder: " + order + "\nviewCount: " + viewCount + "\n";
-            //return Convert.ToString(id);
-            
+         //return Convert.ToString(id);
+           
         }
     }
 }
