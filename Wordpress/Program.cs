@@ -65,8 +65,6 @@ namespace Wordpress
             }
             Console.WriteLine(page.isPublished);
             Console.ReadKey();
-            
-            ///
         }
     }
 }
