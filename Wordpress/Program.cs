@@ -53,7 +53,7 @@ namespace Wordpress
             //Console.WriteLine(thirdPage);
             //Console.WriteLine(SecondPage);
             //Console.WriteLine(fourthPage);
-            Console.WriteLine(page.isPublished);
+        /*    Console.WriteLine(page.isPublished);
             page.status = WordpressPage.Status.Published;
             try
             {
@@ -64,7 +64,11 @@ namespace Wordpress
                 Console.WriteLine(e.Message);
             }
             Console.WriteLine(page.isPublished);
+            */
+            fourthPage.unpublish();
+            Console.WriteLine(fourthPage);
             Console.ReadKey();
+           
             
         }
     }

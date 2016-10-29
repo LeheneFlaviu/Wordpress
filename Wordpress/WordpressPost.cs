@@ -24,6 +24,16 @@ namespace Wordpress
         public List<String> Categories;
         public List<String> Tags;
         string featuredImage;
+        public static int postCount = 0;
+
+        
+
+        public WordpressPost(string p1, string p2):base(p1, p2)
+        {
+            --pageCount;
+             this.id = ++postCount;
+          }
+
 
 
 

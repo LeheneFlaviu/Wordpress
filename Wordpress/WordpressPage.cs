@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Wordpress
 {
-    public class WordpressPage
+    public class WordpressPage:IPublish
     {
          public int id = 99;
  
@@ -145,7 +145,9 @@ namespace Wordpress
          * 
          */
 
-
-        
+    public void unpublish()
+    {
+        this.status = Status.Draft;
+    }
     }
 }
