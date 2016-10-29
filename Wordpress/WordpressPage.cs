@@ -107,20 +107,30 @@ namespace Wordpress
 
             while (list.Count != 0) 
             {
-                string minTitle = list[0].title;
-                int minIndex = 0;
+                //string minTitle = list[0].title;
+                //int minIndex = 0;
+
+                WordpressPage minPage = list[0];
 
                 for (int i = 0; i < list.Count; i++) //count nu e zero based, de aceea "<" nu "<="
                 {
-                    if (String.Compare(minTitle,list[i].title) >= 0)
-                    {
-                        minTitle = list[i].title;
-                        minIndex = i;
-                    }
+                    //if (String.Compare(minTitle,list[i].title) >= 0)
+                    //{
+                    //    minTitle = list[i].title;
+                    //    minIndex = i;
+                    //}
+
+                    if (String.Compare(minPage.title,list[i].title) >= 0)
+                       {
+                        minPage = list[i];
+                       }
                 }
 
-                sortedList.Add(list[minIndex]);
-                list.RemoveAt(minIndex);
+                //sortedList.Add(list[minIndex]);
+                //list.RemoveAt(minIndex);
+
+                sortedList.Add(minPage);
+                list.Remove(minPage);
             };
 
             return sortedList;
