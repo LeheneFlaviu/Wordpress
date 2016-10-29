@@ -42,5 +42,26 @@ namespace Wordpress
             //Assert.IsTrue(testList[2] == testList[2]);
             //Assert.IsTrue(testList[3] == testList[3]);
         }
+
+
+        [Test]
+        public void IndependentAndUniqueIDs()
+        {
+            WordpressPage page1 = new WordpressPage(string.Empty, string.Empty);
+            WordpressPage page2 = new WordpressPage(string.Empty, string.Empty);
+            WordpressPost post1 = new WordpressPost(string.Empty, string.Empty);
+            WordpressPost post2 = new WordpressPost(string.Empty, string.Empty);
+
+            //occam's razor: se poate folosi un caz simplu (ex: 4 elemente, nu 100)
+            //unique
+            Assert.IsTrue(page1.id != page2.id);
+            Assert.IsTrue(post1.id != post2.id);
+
+            //independent
+            Assert.IsTrue(page1.id == post1.id);
+            Assert.IsTrue(page2.id == post2.id);
+
+
+        }
     }
 }

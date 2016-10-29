@@ -12,8 +12,18 @@ namespace Wordpress
         List<string> tags = new List<string>();
         enum Formats  {Standard, Aside, Image, Video, Quote, Link };
         Formats format;
-        public WordpressPost(string title, string content) : base(title, content)
+
+        public static int postCount = 0;
+
+        //public WordpressPost(string title, string content) : base(title, content)
+        //{
+        //}
+
+        public WordpressPost(string title, string content) : base()
         {
+            this.title = title;
+            this.content = content;
+            this.id = ++postCount;
         }
     }
 }
