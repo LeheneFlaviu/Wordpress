@@ -9,7 +9,7 @@ namespace Wordpress
     public class WordpressPage
     {
         public int id = 99;
-        public string title = "blabla";
+        public string title = "testtitle";
         public string content = "abcdefg";
         public enum Status
         {
