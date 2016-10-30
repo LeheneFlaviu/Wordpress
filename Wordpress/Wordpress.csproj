@@ -48,12 +48,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IPublish.cs" />
+    <Compile Include="PassordVisibility.cs" />
+    <Compile Include="PrivateVisibilty.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="PublicVisibilty.cs" />
     <Compile Include="WordPressComment.cs" />
     <Compile Include="WordpressPage.cs" />
     <Compile Include="WordPressPageTest.cs" />
     <Compile Include="WordpressPost.cs" />
+    <Compile Include="WordpressVisibility.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

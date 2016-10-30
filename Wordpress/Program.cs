@@ -17,6 +17,7 @@ namespace Wordpress
             //Console.WriteLine();
            // Console.WriteLine(SecondPage);
             //Console.ReadKey();
+            page.visiblity = new PassordVisibility();
 
 
 

@@ -21,7 +21,9 @@ namespace Wordpress
             PendingReview
         };
         public Status status  { get; set ; }
-        public Boolean isVisible = true;
+        public Boolean isVisible; //= true;
+        public WordpressVisibility visiblity;
+
         public DateTime publishDate;        
         public int parent =1;
         public int order = 2;
@@ -45,6 +47,13 @@ namespace Wordpress
             this.id = ++pageCount;
         }
 
+        public WordpressPage()
+        {
+            visiblity = new PrivateVisibilty();
+            pageCount++;
+            id = pageCount;
+
+        }
         public void Publish()
         {
                 if (this.isPublished)

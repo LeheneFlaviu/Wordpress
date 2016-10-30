@@ -5,4 +5,3 @@ C:\Users\dianag\Wordpress\Wordpress\bin\Debug\nunit.framework.dll
 C:\Users\dianag\Wordpress\Wordpress\bin\Debug\nunit.framework.xml
 C:\Users\dianag\Wordpress\Wordpress\obj\Debug\Wordpress.exe
 C:\Users\dianag\Wordpress\Wordpress\obj\Debug\Wordpress.pdb
-C:\Users\dianag\Wordpress\Wordpress\obj\Debug\Wordpress.csprojResolveAssemblyReference.cache
